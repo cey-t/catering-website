@@ -7,41 +7,51 @@ import Pricing from "../../pages/Pricing/Pricing";
 import Home from "../../pages/Home/Home";
 import logo from "../../images/logo.svg";
 import styles from "./NavBar.module.scss";
+import homePage from "../../images/HomePage/home-page.jpg";
 const NavBar = () => {
   return (
-    <section className={styles.headerContainer}>
-      <Router>
-        <div className={styles.navBarContainer}>
-          <div className={styles.logoContainer}>
-            <Link to="/" className={styles.logo}>
-              <img src={logo} alt="logo" />
-            </Link>
-          </div>
-          <div className={styles.navLinks}>
-            {navLinks.map((nav) => (
-              <Link to={nav.path} className={styles.navItem}>
-                {nav.label ? (
-                  nav.label
-                ) : (
-                  <button className={styles.getStartedButton}>
-                    {nav.buttonLabel}
-                  </button>
-                )}
-              </Link>
-            ))}
-          </div>
+    <>
+      <section className={styles.headerContainer}>
+        <img
+          src={homePage}
+          alt="backgorund-home"
+          className={styles.backgroundImage}
+        />
+        <div className={styles.contentRoot}>
+          <Router>
+            <div className={styles.navBarContainer}>
+              <div className={styles.logoContainer}>
+                <Link to="/" className={styles.logo}>
+                  <img src={logo} alt="logo" />
+                </Link>
+              </div>
+              <div className={styles.navLinks}>
+                {navLinks.map((nav) => (
+                  <Link to={nav.path} className={styles.navItem}>
+                    {nav.label ? (
+                      nav.label
+                    ) : (
+                      <button className={styles.getStartedButton}>
+                        {nav.buttonLabel}
+                      </button>
+                    )}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className={styles.contentContainer}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/features" element={<Features />} />
+                <Route path="/premium" element={<Premium />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/about" element={<About />} />
+              </Routes>
+            </div>
+          </Router>
         </div>
-        <div className={styles.contentContainer}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/premium" element={<Premium />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
-      </Router>
-    </section>
+      </section>
+    </>
   );
 };
 export default NavBar;
