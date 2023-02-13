@@ -1,24 +1,14 @@
-.backgroundImage {
-  position: relative;
-  width: 100%;
-}
 .headerContainer {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
   width: 100%;
+  position: absolute;
   .navBarContainer {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: auto;
-  }
-  .contentRoot {
-    position: absolute;
-    right: 0;
-    left: 0;
-    padding: 10px;
+    margin: 0 auto;
+    z-index: 1;
   }
 
   .navLinks {
