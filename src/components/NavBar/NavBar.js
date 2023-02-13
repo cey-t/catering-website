@@ -27,7 +27,7 @@ const NavBar = () => {
               </div>
               <div className={styles.navLinks}>
                 {navLinks.map((nav) => (
-                  <Link to={nav.path} className={styles.navItem}>
+                  <Link to={nav.path} key={nav.key} className={styles.navItem}>
                     {nav.label ? (
                       nav.label
                     ) : (
