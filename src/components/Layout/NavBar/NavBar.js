@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { navLinks } from "../../../utils/data/navLinks";
-import logo from "../../../images/logo.svg";
+import { navLinks } from "utils/data/navLinks";
+import logo from "images/logo.svg";
 import styles from "./NavBar.module.scss";
 const NavBar = () => {
   const headerNav = navLinks.slice(0, 6);
