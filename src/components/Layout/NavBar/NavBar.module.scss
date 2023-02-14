@@ -1,0 +1,51 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  .navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .navItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18;
+    line-height: 24px;
+    font-weight: 600;
+    transition: color 0.5s;
+    color: #ffffff;
+  }
+  .logo {
+    display: flex;
+  }
+  .getStartedButton {
+    width: max-content;
+    height: 45px;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+  }
+}

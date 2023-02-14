@@ -1,0 +1,50 @@
+.homePage {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url("../../images/HomePage/home-page.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 700px;
+  .homeTitleContainer {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .homeHeader {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 78px;
+    color: #ffffff;
+    margin: 0;
+  }
+  .homeIntro {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .getStartedButton {
+    width: max-content;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #5ab963;
+    transition: background-color 200ms ease;
+    &:hover {
+      background-color: #48944f;
+    }
+  }
+}
