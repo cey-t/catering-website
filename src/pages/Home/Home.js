@@ -1,5 +1,4 @@
 import styles from "./Home.module.scss";
-import FeatureContainer from "../../components/FeatureItemContainer/FeatureContainer";
 const Home = () => {
   return (
     <>
@@ -12,7 +11,6 @@ const Home = () => {
           <button className={styles.getStartedButton}>Get Started</button>
         </div>
       </section>
-      <FeatureContainer />
     </>
   );
 };
