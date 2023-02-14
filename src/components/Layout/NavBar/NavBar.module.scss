@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  position: absolute;
+
   .navBarContainer {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    z-index: 1;
   }
 
   .navLinks {

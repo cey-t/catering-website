@@ -1,11 +1,12 @@
 .homePage {
   display: flex;
   align-items: center;
-  position: relative;
+  width: 100%;
   background-image: url("../../images/HomePage/home-page.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   height: 700px;
+  margin-top: -80px;
   .homeTitleContainer {
     width: 65%;
     margin: auto;
