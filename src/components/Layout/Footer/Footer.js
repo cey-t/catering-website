@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
-import logo from "../../../images/logo.svg";
-import { navLinks } from "../../../utils/data/navLinks";
+import logo from "images/logo.svg";
+import { navLinks } from "utils/data/navLinks";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
