@@ -1,0 +1,33 @@
+.featureBox {
+  padding: 50px 40px;
+  border: 1px solid #f7f7f7;
+  box-shadow: 0 5px 20px 0 rgb(0 0 0 / 5%);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 330px;
+}
+.boxTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+.boxInfo {
+  font-family: "IBM Plex Mono", monospace;
+  line-height: 24px;
+  font-size: 16px;
+  color: #999999;
+  margin: 0;
+}
+.boxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 95%;
+}
