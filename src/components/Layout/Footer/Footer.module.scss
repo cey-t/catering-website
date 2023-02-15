@@ -30,4 +30,26 @@
     align-items: center;
     justify-content: space-around;
   }
+  .logoLink {
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerRoot {
+    .footerLogoContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footerContainer {
+      flex-direction: column;
+    }
+    .footerLinksContainer {
+      width: 90%;
+      align-self: center;
+    }
+    .logo {
+      width: auto;
+    }
+  }
 }

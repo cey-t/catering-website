@@ -10,8 +10,8 @@ const Footer = () => {
     <section className={styles.footerRoot}>
       <div className={styles.footerContainer}>
         <div className={styles.footerLogoContainer}>
-          <Link to="/" className={styles.logo}>
-            <img src={logo} alt="logo" />
+          <Link to="/" className={styles.logoLink}>
+            <img src={logo} alt="logo" className={styles.logo} width={"30%"} />
           </Link>
           <p className={styles.reference}>
             @{new Date().getFullYear()} Spoon Inc, All rights reserved.
