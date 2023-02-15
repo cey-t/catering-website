@@ -2,7 +2,6 @@ import styles from "./Footer.module.scss";
 import logo from "images/logo.svg";
 import { navLinks } from "utils/data/navLinks";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
   const headerNav = navLinks.slice(0, 4);
   const footerNavItems = navLinks.slice(6, 8);
