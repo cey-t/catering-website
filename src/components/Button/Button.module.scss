@@ -14,8 +14,17 @@
     font-size: 18px;
     color: #ffffff;
     transition: background-color 200ms ease;
+    border: none;
     &:hover {
       background-color: #48944f;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .buttonContainer {
+    .button {
+      height: 45px;
+      padding: 25px;
     }
   }
 }

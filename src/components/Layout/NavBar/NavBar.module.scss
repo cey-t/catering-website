@@ -8,6 +8,7 @@
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
+    padding: 10px;
   }
 
   .navLinks {
@@ -26,8 +27,9 @@
     transition: color 0.5s;
     color: #ffffff;
   }
-  .logo {
+  .logoLink {
     display: flex;
+    justify-content: center;
   }
   .getStartedButton {
     width: max-content;
@@ -36,7 +38,7 @@
     border: 3px solid #ffffff;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
     padding: 25px;
     display: flex;
@@ -45,6 +47,32 @@
     &:hover {
       color: #000000;
       background-color: #ffffff;
+    }
+  }
+  .hamburgerIcon {
+    display: none;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .headerContainer {
+    .getStartedButton {
+      padding: 18px;
+    }
+    .navLinks {
+      width: 60%;
+    }
+    .logo {
+      width: 80%;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .headerContainer {
+    .hamburgerIcon {
+      display: flex;
+    }
+    .navLinks {
+      display: none;
     }
   }
 }
