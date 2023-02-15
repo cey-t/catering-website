@@ -1,0 +1,88 @@
+.homePage {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-image: url("/images/HomePage/home-page.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: -100px;
+  .homeTitleContainer {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .introductionSection {
+    width: 90%;
+    height: -webkit-fill-available;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    margin-top: 120px;
+  }
+  .homeHeader {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 78px;
+    color: #ffffff;
+    margin: 0;
+  }
+  .homeIntro {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+    font-family: "IBM Plex Mono", monospace;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .homePage {
+    .homeTitleContainer {
+      gap: 15px;
+    }
+    .homeHeader {
+      font-size: 65px;
+      line-height: 70px;
+    }
+  }
+}
+@media screen and (max-width: 860px) {
+  .homePage {
+    .homeHeader {
+      font-size: 50px;
+      line-height: 65px;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .homePage {
+    .homeTitleContainer {
+      width: 95%;
+    }
+    .homeHeader {
+      font-size: 45px;
+      line-height: 60px;
+    }
+    .homeIntro {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .homePage {
+    .homeTitleContainer {
+      gap: 0;
+      width: 100%;
+    }
+    .homeHeader {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+}

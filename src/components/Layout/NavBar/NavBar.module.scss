@@ -1,0 +1,78 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .navItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18;
+    line-height: 24px;
+    font-weight: 600;
+    transition: color 0.5s;
+    color: #ffffff;
+  }
+  .logoLink {
+    display: flex;
+    justify-content: center;
+  }
+  .getStartedButton {
+    width: max-content;
+    height: 45px;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+  }
+  .hamburgerIcon {
+    display: none;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .headerContainer {
+    .getStartedButton {
+      padding: 18px;
+    }
+    .navLinks {
+      width: 60%;
+    }
+    .logo {
+      width: 80%;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .headerContainer {
+    .hamburgerIcon {
+      display: flex;
+    }
+    .navLinks {
+      display: none;
+    }
+  }
+}
