@@ -1,3 +1,4 @@
+import Button from "components/Button/Button";
 import styles from "./Home.module.scss";
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
           <p className={styles.homeIntro}>
             Propel comes with everything you need to get your business rolling.
           </p>
-          <button className={styles.getStartedButton}>Get Started</button>
+          <Button label="Get Started" />
         </div>
       </section>
     </>
