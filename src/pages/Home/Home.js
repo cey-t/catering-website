@@ -1,5 +1,5 @@
 import Button from "components/Button/Button";
-import Features from "components/Features/Features";
+import Features from "./Features/Features";
 import styles from "./Home.module.scss";
 const Home = () => {
   return (
