@@ -1,0 +1,28 @@
+.contextText {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #b3b3b3;
+  width: 55%;
+}
+.span {
+  font-weight: 800;
+  color: #000000;
+  margin-right: 5px;
+}
+@media screen and (max-width: 1100px) {
+  .contextText {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 830px) {
+  .contextText {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contextText {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

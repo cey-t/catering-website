@@ -1,5 +1,6 @@
 import Button from "components/Button/Button";
 import Features from "./Features/Features";
+import About from "./About/About";
 import styles from "./Home.module.scss";
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         </div>
       </section>
       <Features />
+      <About />
     </>
   );
 };
