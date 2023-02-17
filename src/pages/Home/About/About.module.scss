@@ -3,13 +3,14 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 60px;
   .aboutInfo {
     display: flex;
     justify-content: center;
     margin: auto;
-    width: 100%;
+    width: 95%;
     text-align: -webkit-center;
+    flex-direction: column;
+    padding: 50px 10px;
   }
   .dotContainer {
     display: flex;
@@ -37,5 +38,12 @@
   }
   .activeDot {
     background-color: #ffffff;
+  }
+  .aboutUs {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: #3cb371;
+    text-transform: uppercase;
   }
 }

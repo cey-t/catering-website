@@ -1,7 +1,7 @@
-import styles from "./Features.module.scss";
-import { features } from "utils/data/featuresData";
-import ContextBox from "components/ContextBox/ContextBox";
 import FeatureContainer from "components/FeatureBox/FeatureBox";
+import ContextBox from "components/ContextBox/ContextBox";
+import { features } from "utils/data/featuresData";
+import styles from "./Features.module.scss";
 const Features = () => {
   return (
     <section className={styles.featuresRoot}>

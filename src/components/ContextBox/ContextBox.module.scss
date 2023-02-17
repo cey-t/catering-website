@@ -18,11 +18,13 @@
 @media screen and (max-width: 830px) {
   .contextText {
     width: 100%;
+    font-size: 20px;
+    font-weight: 25px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .contextText {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
