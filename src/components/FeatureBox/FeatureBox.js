@@ -1,4 +1,4 @@
-import styles from "./FeatureContainer.module.scss";
+import styles from "./FeatureBox.module.scss";
 const FeatureContainer = ({ title, content, logo }) => {
   return (
     <div className={styles.featureBox}>

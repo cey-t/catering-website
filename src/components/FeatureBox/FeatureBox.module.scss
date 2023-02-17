@@ -4,10 +4,10 @@
   box-shadow: 0 5px 20px 0 rgb(0 0 0 / 5%);
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  height: 330px;
+  gap: 45px;
+  height: 280px;
 }
-.featureItemTitle {
+.boxTitle {
   font-size: 20px;
   font-weight: 600;
   color: #000000;
@@ -18,16 +18,15 @@
   align-items: center;
   width: max-content;
 }
-.featureItemContent {
+.boxInfo {
   font-family: "IBM Plex Mono", monospace;
   line-height: 24px;
   font-size: 16px;
   color: #999999;
   margin: 0;
 }
-.featureDetails {
+.boxContent {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 95%;
+  gap: 20px;
 }
