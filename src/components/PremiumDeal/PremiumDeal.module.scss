@@ -1,9 +1,15 @@
 .premiumBox {
   width: 90%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
   .premiumDeal {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
     width: 80%;
+    margin: auto;
   }
   .premiumSubText {
     font-family: "IBM Plex Mono", monospace;
@@ -11,5 +17,79 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
+    width: 70%;
+  }
+
+  .premiumImages {
+    display: flex;
+    justify-self: center;
+  }
+  .premiumTitle {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 300;
+    color: #b3b3b3;
+    margin: 0;
+    width: 70%;
+  }
+  .highlight {
+    font-weight: 800;
+    color: #000000;
+    margin-right: 5px;
+  }
+  .premiumDeal:nth-child(3) {
+    direction: rtl;
+    .premiumFeature {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: #3cb371;
+  }
+  .footerPremiumDealSection {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  .border {
+    border-bottom: 1px solid #b3b3b3;
+  }
+}
+@media screen and (max-width: 1320px) {
+  .premiumBox {
+    .premiumTitle,
+    .premiumSubText {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .premiumBox {
+    .premiumFeature {
+      padding: 15px;
+    }
+    .premiumDeal {
+      width: 90%;
+    }
+    .premiumTitle {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    .footerPremiumDealSection {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 861px) {
+  .premiumBox {
+    .premiumFeature {
+      text-align: center;
+    }
   }
 }
