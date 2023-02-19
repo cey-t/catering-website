@@ -1,5 +1,6 @@
 import Button from "components/Button/Button";
 import Features from "./Features/Features";
+import PremiumDeal from "components/PremiumDeal/PremiumDeal";
 import About from "./About/About";
 import styles from "./Home.module.scss";
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
       </section>
       <Features />
       <About />
+      <PremiumDeal />
     </>
   );
 };

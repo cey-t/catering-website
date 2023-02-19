@@ -1,11 +1,12 @@
 .aboutSection {
-  width: 95%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
   .aboutInfo {
     display: flex;
     justify-content: center;
+    gap: 20px;
     margin: auto;
     width: 95%;
     text-align: -webkit-center;
