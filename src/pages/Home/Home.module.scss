@@ -16,6 +16,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    animation: slide-in 1.2s ease-out;
   }
   .introductionSection {
     width: 90%;
@@ -39,6 +40,16 @@
     color: #ffffff;
     font-family: "IBM Plex Mono", monospace;
     width: 90%;
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @media screen and (max-width: 1150px) {
