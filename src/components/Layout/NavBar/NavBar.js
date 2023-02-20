@@ -33,7 +33,6 @@ const NavBar = () => {
             </Link>
           ))}
         </div>
-        {console.log(showNav)}
         <img
           onClick={() => setShowNav(!showNav)}
           src={hamburger}

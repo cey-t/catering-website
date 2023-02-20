@@ -1,0 +1,78 @@
+.innerHeaderBoxContainer {
+  background-color: #5ab963;
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 150px 0px;
+  .headerBox {
+    width: 90%;
+    margin: auto;
+  }
+  .pageNameContainer {
+    display: flex;
+    gap: 10px;
+  }
+  .pageName {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .border {
+    width: 2%;
+    align-self: center;
+    border-top: 3px solid#ffffff;
+  }
+  .header {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 78px;
+    width: 50%;
+    color: #ffffff;
+    margin: 0;
+  }
+  .content {
+    font-family: "IBM Plex Mono", monospace;
+    line-height: 24px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .innerHeaderBoxContainer {
+    .header {
+      font-size: 65px;
+      line-height: 70px;
+    }
+    .header,
+    .content {
+      width: 75%;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .innerHeaderBoxContainer {
+    .header {
+      font-size: 45px;
+      line-height: 50px;
+    }
+    .content {
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .header,
+    .content {
+      width: 75%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .innerHeaderBoxContainer {
+    .header,
+    .content {
+      width: 100%;
+    }
+  }
+}
