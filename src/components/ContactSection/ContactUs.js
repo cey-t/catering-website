@@ -11,7 +11,9 @@ const ContactUs = () => {
           text="Pri cu dico labores officiis odio principes complectitur ad sea."
         />
       </div>
-      <Button label="Get Started" />
+      <div className={styles.getStartedButton}>
+        <Button label="Get Started" />
+      </div>
     </section>
   );
 };

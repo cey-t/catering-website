@@ -12,3 +12,14 @@
     color: #5ab963;
   }
 }
+@media screen and (max-width: 800px) {
+  .contactSection {
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 0;
+  }
+  .getStartedButton {
+    display: flex;
+    align-self: flex-start;
+  }
+}
