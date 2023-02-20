@@ -1,0 +1,25 @@
+.contactSection {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding: 150px 0;
+  justify-content: center;
+  align-items: center;
+  .partyOn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #5ab963;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contactSection {
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 0;
+  }
+  .getStartedButton {
+    display: flex;
+    align-self: flex-start;
+  }
+}
