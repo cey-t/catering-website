@@ -52,6 +52,9 @@
   .hamburgerIcon {
     display: none;
   }
+  .mobileNavBar {
+    display: none;
+  }
 }
 @media screen and (max-width: 1150px) {
   .headerContainer {
@@ -73,6 +76,28 @@
     }
     .navLinks {
       display: none;
+    }
+    .mobileNavBar {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      gap: 30px;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      margin-top: 85px;
+      padding: 30px 0;
+      background-color: #5ab963;
+      box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%);
+    }
+    .mobileButton {
+      width: 90%;
+      justify-content: center;
+    }
+    .navItem {
+      width: 80%;
+      display: flex;
+      justify-content: center;
     }
   }
 }
