@@ -90,5 +90,14 @@
       background-color: #5ab963;
       box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%);
     }
+    .mobileButton {
+      width: 90%;
+      justify-content: center;
+    }
+    .navItem {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+    }
   }
 }

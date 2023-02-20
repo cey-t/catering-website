@@ -4,6 +4,7 @@ import { navLinks } from "utils/data/navLinks";
 import logo from "images/logo.svg";
 import hamburger from "images/hamburger.svg";
 import styles from "./NavBar.module.scss";
+import classNames from "classnames";
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const headerNav = navLinks.slice(0, 6);
@@ -54,7 +55,10 @@ const NavBar = () => {
               ) : (
                 <button
                   onClick={() => setShowNav(!showNav)}
-                  className={styles.getStartedButton}
+                  className={classNames(
+                    styles.getStartedButton,
+                    styles.mobileButton
+                  )}
                 >
                   {nav.buttonLabel}
                 </button>
