@@ -3,6 +3,7 @@ import ContextBox from "components/ContextBox/ContextBox";
 import { features } from "utils/data/featuresData";
 import styles from "./Features.module.scss";
 const Features = () => {
+  const featureSummary = features.slice(0, 3);
   return (
     <section className={styles.featuresRoot}>
       <div className={styles.featuresHeader}>
@@ -13,7 +14,7 @@ const Features = () => {
         />
       </div>
       <div className={styles.featuresContainer}>
-        {features.map((feature) => (
+        {featureSummary.map((feature) => (
           <div key={feature.id} className={styles.feature}>
             <FeatureContainer
               title={feature.title}

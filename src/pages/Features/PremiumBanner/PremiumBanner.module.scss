@@ -1,0 +1,104 @@
+.premiumBannerContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .premiumBannerImage {
+    display: flex;
+  }
+  .innerContentRoot {
+    display: flex;
+    width: 80%;
+    position: absolute;
+    justify-content: flex-end;
+  }
+  .innerContentBox {
+    width: 25%;
+    background-color: #5ab963;
+    padding: 60px 50px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .goPremium {
+    display: flex;
+    gap: 10px;
+  }
+  .pageName {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .border {
+    width: 4%;
+    align-self: center;
+    border-top: 3px solid#ffffff;
+  }
+  .header {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0;
+  }
+  span {
+    font-weight: 800;
+  }
+  .goPremiumButton {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 30px;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .premiumBannerContainer {
+    .innerContentBox {
+      width: 40%;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .premiumBannerContainer {
+    .header {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    .innerContentRoot {
+      justify-content: center;
+    }
+    .innerContentBox {
+      width: 50%;
+    }
+    .goPremiumButton {
+      padding: 5px 10px;
+      width: auto;
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .premiumBannerContainer {
+    .innerContentBox {
+      padding: 30px 40px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .premiumBannerContainer {
+    .innerContentRoot {
+      width: 90%;
+    }
+    .innerContentBox {
+      width: 100%;
+    }
+  }
+}

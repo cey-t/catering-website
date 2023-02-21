@@ -21,7 +21,7 @@ const Home = () => {
       </section>
       <Features />
       <About />
-      <PremiumDeal />
+      <PremiumDeal link />
       <ContactUs />
     </>
   );
