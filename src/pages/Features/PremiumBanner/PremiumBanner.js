@@ -1,4 +1,5 @@
 import styles from "./PremiumBanner.module.scss";
+import { Link } from "react-router-dom";
 import cookies from "images/Feature/cookies.jpg";
 const PremiumBanner = () => {
   return (
@@ -21,9 +22,9 @@ const PremiumBanner = () => {
               Tibique suscipiantur, per ex scripta fabellas petentium.
             </h2>
           </div>
-          <button link to="/premium" className={styles.goPremiumButton}>
-            Go Premium
-          </button>
+          <Link to="/premium">
+            <button className={styles.goPremiumButton}>Go Premium</button>
+          </Link>
         </div>
       </div>
     </section>
