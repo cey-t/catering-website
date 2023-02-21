@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Catering Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Aim
 
-## Available Scripts
+The aim of this project is to turn a UI/UX design into a functional website using React JS.
+By doing this, I want to improve my coding skills and gain more experience.
+Through this project I want to achieve following:
 
-In the project directory, you can run:
+- Improve my front-end development skills: I want to gain experience with React js and Sass by
+  designing and building an attractive and user-friendly website that showcases my catering services.
+- Translate a design into code: By working with an existing design, I hope to improve my skills in
+  translating UI/UX design into code. This will help me develop a better understanding of how to create
+  websites that are not only beatiful but also functional and user-friendly
+- Develop a portfolio piece: I plan to use this website as part of my portfolioto showcase my skills to
+  potential clients and employers. By turning a design into a website, I hope to demonstrate my ability
+  to design and develop beatiful and responsive user interfaces.
+- Improve my API integration skills : By using WordPress blog as part of my website, I hope to improve my
+  skills in integrating third-party APIs into my projects. This will help me develop better understanding
+  of how to create websites that rely on external data sources, which is important skill for modern web design.
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project uses the Yarn package manage depencies. I prefer to use Yarn because it is fast and reliable tool
+for installing and managing packages, and it provides number of advantages over other package managers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You need to install the dependencies by using `yarn install` command
+By using yarn I am ensure that my project's dependencies are up to date and that the installation process
+fast and efficient.If you have any questions or issues with the installation process, please refer to the
+Yarn documentation or open an issue on this project's GitHub repository.
