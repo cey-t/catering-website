@@ -2,7 +2,7 @@ import styles from "./PremiumDeal.module.scss";
 import peach from "images/Common/peach.jpg";
 import granola from "images/Common/granola.jpg";
 import { Link } from "react-router-dom";
-const PremiumDeal = () => {
+const PremiumDeal = ({ link }) => {
   const premiumInfo = [
     {
       id: 1,
@@ -39,12 +39,14 @@ const PremiumDeal = () => {
           </div>
         </div>
       ))}
-      <div className={styles.footerPremiumDealSection}>
-        <h3>Wanna know more about the Premium deal?</h3>
-        <Link className={styles.link} to="/premium">
-          SEE THE FULL RANGE OF PREMIUM
-        </Link>
-      </div>
+      {link && (
+        <div className={styles.footerPremiumDealSection}>
+          <h3>Wanna know more about the Premium deal?</h3>
+          <Link className={styles.link} to="/premium">
+            SEE THE FULL RANGE OF PREMIUM
+          </Link>
+        </div>
+      )}
       <div className={styles.border}></div>
     </div>
   );
