@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const headerNav = navLinks.slice(0, 4);
   const footerNavItems = navLinks.slice(6, 8);
-  const footerNav = headerNav.concat(footerNavItems);
+  const footerNav = [...headerNav, ...footerNavItems];
   return (
     <section className={styles.footerRoot}>
       <div className={styles.footerContainer}>
