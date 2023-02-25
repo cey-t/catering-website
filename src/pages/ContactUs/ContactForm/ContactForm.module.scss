@@ -1,0 +1,75 @@
+.contactFormRoot {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 100px;
+  padding: 100px 20px;
+  flex-direction: column;
+  .contextBox {
+    width: 69%;
+  }
+
+  .contactText {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .contactBox {
+    display: flex;
+    gap: 10px;
+  }
+  .contactInfoText {
+    color: #000000;
+    width: 40%;
+  }
+  .contactFormContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .contactForm {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .input {
+    width: -webkit-fill-available;
+    border: none;
+    border-bottom: 1px solid #b3b3b3;
+    outline: none;
+    padding: 20px 10px;
+    font-family: "IBM Plex Mono", monospace;
+    overflow: hidden;
+    &:focus {
+      border-bottom: 1px solid #000000;
+    }
+  }
+  .submitButton {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contactFormRoot {
+    .contactForm {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 570px) {
+  .contactFormRoot {
+    gap: 70px;
+    .contactInfoText {
+      width: 60%;
+    }
+  }
+}
+@media screen and (max-width: 470px) {
+  .contactFormRoot {
+    gap: 50px;
+    .contactInfoText {
+      width: 70%;
+    }
+  }
+}
