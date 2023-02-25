@@ -8,6 +8,7 @@ import Pricing from "pages/Pricing/Pricing";
 import About from "pages/About/About";
 import Premium from "pages/Premium/Premium";
 import Blog from "pages/Blog/Blog";
+import ContactUs from "pages/ContactUs/ContactUs";
 const App = () => {
   return (
     <div className={styles.appContainer}>
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/Blog" element={<Blog />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer />
       </Router>
