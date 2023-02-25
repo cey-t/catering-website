@@ -2,10 +2,9 @@ import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import ContactUs from "components/ContactSection/ContactUs";
 import PremiumIntro from "./PremiumIntro/PremiumIntro";
 import PremiumDeal from "components/PremiumDeal/PremiumDeal";
-import styles from "./Premium.module.scss";
 const Premium = () => {
   return (
-    <section className={styles.premiumPage}>
+    <section>
       <HeaderContextBox
         name="Premium"
         header="Personalized and total service."
