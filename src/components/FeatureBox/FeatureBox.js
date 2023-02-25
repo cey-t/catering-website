@@ -1,7 +1,8 @@
 import styles from "./FeatureBox.module.scss";
-const FeatureContainer = ({ title, content, logo }) => {
+import classNames from "classnames";
+const FeatureContainer = ({ title, content, logo, className = null }) => {
   return (
-    <div className={styles.featureBox}>
+    <div className={classNames(styles.featureBox, className)}>
       <div className={styles.logoContainer}>
         <img src={logo} alt="logo" />
       </div>

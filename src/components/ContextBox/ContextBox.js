@@ -1,7 +1,8 @@
 import styles from "./ContextBox.module.scss";
-const ContextBox = ({ text, span }) => {
+import classNames from "classnames";
+const ContextBox = ({ text, span, className = null }) => {
   return (
-    <section className={styles.contextContainer}>
+    <section className={classNames(styles.contextContainer, className)}>
       <h2 className={styles.contextText}>
         <span className={styles.span}>{span}</span>
         {text}

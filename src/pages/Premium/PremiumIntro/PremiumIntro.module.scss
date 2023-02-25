@@ -1,0 +1,55 @@
+.premiumIntroRoot {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  padding: 120px 0;
+  .featureContainer {
+    height: auto;
+    width: 80%;
+    padding: 40px 60px;
+    margin: auto;
+    position: absolute;
+    bottom: -90px;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    flex-direction: row;
+  }
+  .imageContainer {
+    position: relative;
+  }
+  .opinionContainer {
+    width: 80%;
+    margin: auto;
+    padding: 40px 60px;
+    text-align: center;
+  }
+  .opinions {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #999999;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .blockQuote {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 300;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: #5ab963;
+  }
+  .blogWriter {
+    color: #000000;
+    font-weight: 400;
+  }
+  .contextBox {
+    width: 68%;
+    margin: auto;
+    padding: 50px 30px;
+  }
+}
