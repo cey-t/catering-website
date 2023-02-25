@@ -1,9 +1,8 @@
-import styles from "./ContactUs.module.scss";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import ContactForm from "./ContactForm/ContactForm";
 const ContactUs = () => {
   return (
-    <section className={styles.contactUsRoot}>
+    <section>
       <HeaderContextBox
         name="Contact"
         header="Have a question for us? Go for it."
