@@ -7,7 +7,7 @@
   padding: 120px 0;
   .featureContainer {
     height: auto;
-    width: 80%;
+    width: 85%;
     padding: 40px 60px;
     margin: auto;
     position: absolute;
@@ -21,7 +21,7 @@
     position: relative;
   }
   .opinionContainer {
-    width: 80%;
+    width: 70%;
     margin: auto;
     padding: 40px 60px;
     text-align: center;
@@ -37,7 +37,6 @@
     font-size: 24px;
     line-height: 36px;
     font-weight: 300;
-    width: 65%;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -51,5 +50,45 @@
     width: 68%;
     margin: auto;
     padding: 50px 30px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .premiumIntroRoot {
+    .featureContainer {
+      padding: 25px 30px;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .premiumIntroRoot {
+    .featureContainer {
+      position: relative;
+      padding: 25px;
+      flex-direction: column;
+    }
+    .contextBox {
+      width: 85%;
+      padding: 20px;
+    }
+    .blockQuote {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .premiumIntroRoot {
+    .blockQuote {
+      font-size: 16px;
+      line-height: 25px;
+    }
+    .blogWriter {
+      font-size: 12px;
+    }
+    .opinionContainer {
+      padding: 40px;
+    }
   }
 }
