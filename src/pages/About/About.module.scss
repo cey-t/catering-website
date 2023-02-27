@@ -1,0 +1,13 @@
+.aboutRoot {
+  width: 100%;
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+  }
+  .contextBox {
+    padding: 80px 40px;
+    text-align: -webkit-center;
+  }
+}
