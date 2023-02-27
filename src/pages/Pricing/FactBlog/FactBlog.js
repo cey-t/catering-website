@@ -6,6 +6,7 @@ const FactBlog = () => {
     <section className={styles.factBlogFeatures}>
       {FeatureBlogData.map((data) => (
         <FeatureContainer
+          key={data.id}
           title={data.title}
           content={data.content}
           logo={data.icon}
