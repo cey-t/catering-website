@@ -11,7 +11,7 @@ const FAQ = () => {
       />
       <div className={styles.faqContainer}>
         {faq.map((asked) => (
-          <div className={styles.faq}>
+          <div key={asked.id} className={styles.faq}>
             <h3 className={styles.question}>{asked.question}</h3>
             <p className={styles.answer}>{asked.answer}</p>
           </div>
