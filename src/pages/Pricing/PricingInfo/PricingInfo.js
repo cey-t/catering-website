@@ -13,10 +13,11 @@ const PricingInfo = () => {
       <div className={styles.pricingInformationBox}>
         {Pricing.map((catering) => {
           const cateringContains = catering.contains.map((item) => (
-            <p>{item}</p>
+            <p key={item.id}>{item}</p>
           ));
           return (
             <PricingBox
+              key={catering.id}
               type={catering.type}
               price={catering.price}
               content={catering.content}
