@@ -1,5 +1,6 @@
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import PricingInfo from "./PricingInfo/PricingInfo";
+import FactBlog from "./FactBlog/FactBlog";
 import ContactUs from "components/ContactSection/ContactUs";
 const Pricing = () => {
   return (
@@ -10,6 +11,7 @@ const Pricing = () => {
         content="At sint tollit veritus duo, ex tota inimicus dissentiunt usu. Dico tamquam perfecto usu id. Eu nec option perfecto vituperatoribus. Ea qui congue patrioque, quo ei recteque consequuntur."
       />
       <PricingInfo />
+      <FactBlog />
       <ContactUs />
     </section>
   );

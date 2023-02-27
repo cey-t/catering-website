@@ -6,6 +6,7 @@ import carPark from "images/Feature/car-park.svg";
 import menu from "images/Feature/menu.svg";
 import oven from "images/Feature/oven.svg";
 import washingMachine from "images/Feature/washing-machine.svg";
+import tick from "images/Feature/tick.svg";
 export const features = [
   {
     id: 1,
@@ -56,5 +57,34 @@ export const features = [
     icon: washingMachine,
     title: "Illud albucius",
     content: "Wisi ornatus his at, viderer tractatos incorrupte has te. ",
+  },
+];
+
+export const FeatureBlogData = [
+  {
+    id: 1,
+    icon: tick,
+    title: "Pro ad constituto",
+    content: "Ne usu illud albucius abhor reant, partiendo scriptorem mel ne.",
+  },
+  {
+    id: 2,
+    icon: tick,
+    title: "Eam commodo",
+    content:
+      "Ne his fabellas efficiendi. Eum te rebum accusamus, et omnium option.",
+  },
+  {
+    id: 3,
+    icon: tick,
+    title: "Reormidans eis",
+    content: "Maluisset imperdiet ea vel. Justo doctus dissentiet in nec.",
+  },
+  {
+    id: 4,
+    icon: tick,
+    title: "Fabellas efficiendi",
+    content:
+      "Ut sea saperet expetendis, in virtute detraxit quo dipiscing efficiendi nam ea.",
   },
 ];
