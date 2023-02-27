@@ -1,6 +1,7 @@
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import PricingInfo from "./PricingInfo/PricingInfo";
 import FactBlog from "./FactBlog/FactBlog";
+import FAQ from "./FAQ.js/FAQ";
 import ContactUs from "components/ContactSection/ContactUs";
 const Pricing = () => {
   return (
@@ -12,6 +13,7 @@ const Pricing = () => {
       />
       <PricingInfo />
       <FactBlog />
+      <FAQ />
       <ContactUs />
     </section>
   );

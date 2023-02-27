@@ -1,0 +1,52 @@
+.faqSection {
+  width: 85%;
+  margin: auto;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  .contextBox {
+    width: 70%;
+  }
+  .question {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #000000;
+  }
+  .answer {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #999999;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .faqContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
+  .border {
+    border-bottom: 1px solid #999999;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .faqSection {
+    .faqSection {
+      gap: 60px;
+    }
+    .faqContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .faqSection {
+    .contextBox {
+      width: 100%;
+    }
+  }
+}
