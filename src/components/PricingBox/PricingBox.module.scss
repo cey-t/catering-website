@@ -2,4 +2,38 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  box-shadow: 0 5px 20px 0 rgb(0 0 0 / 14%);
+  padding: 50px 40px 40px;
+  .partyType {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .priceText {
+    font-size: 72px;
+    line-height: 78px;
+    color: #000000;
+    margin: 0;
+  }
+  .currency {
+    font-size: 16px;
+    line-height: 26px;
+    color: #999999;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .contentText {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999999;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .header {
+    height: 210px;
+  }
+  .containsText {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "IBM Plex Mono", monospace;
+  }
 }

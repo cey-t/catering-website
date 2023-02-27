@@ -1,4 +1,4 @@
-export default pricing = [
+export const Pricing = [
   {
     type: "Small",
     price: "150",

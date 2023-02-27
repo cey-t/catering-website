@@ -2,4 +2,20 @@
   width: 90%;
   margin: auto;
   padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  .contextBox {
+    width: 70%;
+  }
+  .pricingInformationBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .border {
+    border-bottom: 1px solid #5ab963;
+    width: 100%;
+    height: 10px;
+  }
 }
