@@ -1,4 +1,6 @@
+import Button from "components/Button/Button";
 import styles from "./PricingBox.module.scss";
+
 const PricingBox = ({ type, price, content, contains, borderStyle }) => {
   return (
     <section className={styles.pricingBoxContainer}>
@@ -13,6 +15,11 @@ const PricingBox = ({ type, price, content, contains, borderStyle }) => {
       <div className={styles.features}>
         <p className={styles.containsText}>{contains}</p>
       </div>
+      <Button
+        buttonContainer={styles.getStartedButton}
+        className={styles.button}
+        label="Get Started"
+      />
     </section>
   );
 };
