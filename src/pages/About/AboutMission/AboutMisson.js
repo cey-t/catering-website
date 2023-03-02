@@ -31,7 +31,7 @@ const AboutMission = () => {
       />
       <div className={styles.companyMissions}>
         {Missions.map((mission) => (
-          <div className={styles.missionContainer}>
+          <div key={mission.id} className={styles.missionContainer}>
             <h3 className={styles.missionKey}>0{mission.id}</h3>
             <h2 className={styles.missionText}>{mission.name}</h2>
             <p className={styles.missionContent}>{mission.content}</p>
