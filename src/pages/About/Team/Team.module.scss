@@ -1,4 +1,41 @@
 .aboutTeam {
   width: 90%;
   margin: auto;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  .teamMembersContainer {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .teamMemberBox {
+    box-shadow: 0 5px 20px 0 rgb(0 0 0 / 5%);
+    cursor: pointer;
+  }
+  .memberInfo {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .memberName {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    color: #000000;
+    font-weight: 600;
+  }
+  .memberRole {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+    margin: 0;
+  }
+  .border {
+    border-bottom: 1px solid #b3b3b3;
+  }
 }

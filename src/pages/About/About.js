@@ -3,6 +3,7 @@ import bananaCake from "images/Premium/banana-cake.jpg";
 import AboutMission from "./AboutMission/AboutMisson";
 import ContactUs from "components/ContactSection/ContactUs";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
+import Team from "./Team/Team";
 import styles from "./About.module.scss";
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
         <img
           className={styles.heroImage}
           src={bananaCake}
-          width={"80%"}
+          width={"90%"}
           alt="banana cake"
         />
       </div>
@@ -27,6 +28,7 @@ const About = () => {
       />
 
       <AboutMission />
+      <Team />
       <ContactUs />
     </section>
   );

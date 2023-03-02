@@ -1,5 +1,6 @@
 .aboutRoot {
   width: 100%;
+
   .imageContainer {
     display: flex;
     align-items: center;
@@ -9,5 +10,8 @@
   .contextBox {
     padding: 80px 40px;
     text-align: -webkit-center;
+  }
+  .heroImage {
+    z-index: 1;
   }
 }
