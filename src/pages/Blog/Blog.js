@@ -35,6 +35,7 @@ const Blog = () => {
           ); //to fetch the cover Image
           return (
             <BlogPost
+              key={id}
               image={apiURL + coverImage}
               title={attributes.title}
               summary={attributes.summary}
