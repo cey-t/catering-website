@@ -29,7 +29,7 @@ const Blog = () => {
       />
       <div className={styles.blogsContainer}>
         {blogs?.data?.map(({ attributes, id }) => {
-          return <div>{attributes.content}</div>;
+          return <div key={id}>{attributes.content}</div>;
         })}
       </div>
       <ContactUs />
