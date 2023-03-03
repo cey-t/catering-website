@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import ContactUs from "components/ContactSection/ContactUs";
 import { apiURL } from "utils/api/api";
-import { useEffect, useState } from "react";
+import BlogPost from "./BlogPost/BlogPost";
 import styles from "./Blog.module.scss";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -9,7 +10,7 @@ const Blog = () => {
     const getAllBlogs = async () => {
       try {
         const res = await fetch(
-          `${apiURL}/blogs?populate=cardImage,coverImage`
+          `${apiURL}/api/blogs?populate=cardImage,coverImage`
         );
         const data = await res.json();
         if (!res.ok) throw new Error("Something went wrong");
@@ -21,7 +22,7 @@ const Blog = () => {
     getAllBlogs();
   }, []);
   return (
-    <section>
+    <section className={styles.blogRoot}>
       <HeaderContextBox
         name="Blog"
         header="Our latest news and events."
@@ -29,7 +30,18 @@ const Blog = () => {
       />
       <div className={styles.blogsContainer}>
         {blogs?.data?.map(({ attributes, id }) => {
-          return <div key={id}>{attributes.content}</div>;
+          const coverImage = attributes?.cardImage?.data?.map(
+            ({ attributes }) => attributes.formats.small.url
+          ); //to fetch the cover Image
+          return (
+            <BlogPost
+              key={id}
+              image={apiURL + coverImage}
+              title={attributes.title}
+              summary={attributes.summary}
+              postDate={attributes.date}
+            />
+          );
         })}
       </div>
       <ContactUs />
