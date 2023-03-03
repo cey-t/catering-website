@@ -1,8 +1,12 @@
-.blogsContainer {
-  width: 90%;
-  margin: -90px auto 30px;
-  display: grid;
-  gap: 50px;
-  grid-template-columns: 1fr 1fr 1fr;
-  z-index: 1;
+.blogRoot {
+  .blogsContainer {
+    width: 100%;
+    margin: -90px auto 30px;
+    width: 90%;
+    display: grid;
+    justify-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    z-index: 1;
+  }
 }
