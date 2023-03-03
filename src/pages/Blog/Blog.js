@@ -29,11 +29,6 @@ const Blog = () => {
       />
       <div className={styles.blogsContainer}>
         {blogs?.data?.map(({ attributes, id }) => {
-          console.log(attributes.coverImage.data);
-          const coverImage = attributes.coverImage.data.map(
-            ({ attributes }) => attributes.url
-          );
-
           return <div>{attributes.content}</div>;
         })}
       </div>
