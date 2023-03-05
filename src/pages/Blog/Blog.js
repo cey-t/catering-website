@@ -1,20 +1,18 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import ContactUs from "components/ContactSection/ContactUs";
 import { apiURL } from "utils/api/api";
 import BlogPostCard from "./BlogPostCard/BlogPostCard";
 import styles from "./Blog.module.scss";
-import { useNavigate } from "react-router-dom";
 import BlogPost from "./BlogPost/BlogPost";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
-  const [uuid, setUid] = useState([]);
-  const navigate = useNavigate();
+  const [uidData, setUid] = useState([]);
+  const { uid } = useParams();
   const handleClick = (uid) => {
     getBlogPostByUid(uid);
-    navigate(uid);
   };
-  console.log(uuid);
   useEffect(() => {
     const getAllBlogs = async () => {
       try {
@@ -44,6 +42,9 @@ const Blog = () => {
       console.log(error.message);
     }
   };
+  useEffect(() => {
+    getBlogPostByUid(uid);
+  }, [uid]);
   return (
     <section className={styles.blogRoot}>
       <HeaderContextBox
@@ -71,7 +72,7 @@ const Blog = () => {
           }
         )}
       </div>
-      <BlogPost uuid={uuid} />
+      <BlogPost uuid={uidData} />
       <ContactUs />
     </section>
   );
