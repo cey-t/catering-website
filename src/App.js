@@ -8,6 +8,7 @@ import Pricing from "pages/Pricing/Pricing";
 import About from "pages/About/About";
 import Premium from "pages/Premium/Premium";
 import Blog from "pages/Blog/Blog";
+import BlogPost from "pages/Blog/BlogPost/BlogPost";
 import ContactUs from "pages/ContactUs/ContactUs";
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/Blog" element={<Blog />} />
+          <Route path="/Blog/:uid" element={<BlogPost />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer />
