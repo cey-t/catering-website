@@ -8,4 +8,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     z-index: 1;
   }
+  .link {
+    display: inline-block;
+  }
 }
