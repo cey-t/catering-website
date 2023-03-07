@@ -1,0 +1,38 @@
+.blogPostRoot {
+  .postRoot {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+  .postContainer {
+    width: 55%;
+    overflow: hidden;
+  }
+  .postTitle {
+    font-size: 72px;
+    line-height: 78px;
+    color: #000000;
+    font-weight: 800;
+    text-align: center;
+  }
+  .postDate {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: 600;
+  }
+  .contentText {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .postImage {
+    margin-top: -200px;
+    z-index: 1;
+  }
+}

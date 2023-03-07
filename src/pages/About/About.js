@@ -9,6 +9,7 @@ const About = () => {
   return (
     <section className={styles.aboutRoot}>
       <HeaderContextBox
+        hasBorder
         name="About"
         header="Changing the catering game."
         content="At sint tollit veritus duo, ex tota inimicus dissentiunt usu. Dico tamquam perfecto usu id. Eu nec option perfecto vituperatoribus. Ea qui congue patrioque, quo ei recteque consequuntur."

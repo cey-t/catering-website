@@ -26,6 +26,7 @@ const Blog = () => {
   return (
     <section className={styles.blogRoot}>
       <HeaderContextBox
+        hasBorder
         name="Blog"
         header="Our latest news and events."
         content="At sint tollit veritus duo, ex tota inimicus dissentiunt usu. Dico tamquam perfecto usu id. Eu nec option perfecto vituperatoribus. Ea qui congue patrioque, quo ei recteque consequuntur."
