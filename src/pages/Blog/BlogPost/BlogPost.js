@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
 import { apiURL } from "utils/api/api";
 import ReactMarkdown from "react-markdown";
+import leftArrow from "images/left-arrow.svg";
 import ContactUs from "components/ContactSection/ContactUs";
 import BlogPostCard from "../BlogPostCard/BlogPostCard";
 import styles from "./BlogPost.module.scss";
@@ -64,6 +65,10 @@ const BlogPost = () => {
                 <ReactMarkdown className={styles.contentText}>
                   {content}
                 </ReactMarkdown>
+
+                <Link to={`/blog`} className={styles.leftArrow}>
+                  <img src={leftArrow} alt="left-arrow" width={25} />
+                </Link>
               </div>
             </div>
           );
