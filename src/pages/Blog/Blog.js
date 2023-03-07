@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import ContactUs from "components/ContactSection/ContactUs";
 import { apiURL } from "utils/api/api";
-import BlogPost from "./BlogPost/BlogPost";
+import BlogPostCard from "./BlogPostCard/BlogPostCard";
 import styles from "./Blog.module.scss";
 const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState({});
+
   useEffect(() => {
     const getAllBlogs = async () => {
       try {
@@ -21,29 +22,37 @@ const Blog = () => {
     };
     getAllBlogs();
   }, []);
+
   return (
     <section className={styles.blogRoot}>
       <HeaderContextBox
+        hasBorder
         name="Blog"
         header="Our latest news and events."
         content="At sint tollit veritus duo, ex tota inimicus dissentiunt usu. Dico tamquam perfecto usu id. Eu nec option perfecto vituperatoribus. Ea qui congue patrioque, quo ei recteque consequuntur."
       />
       <div className={styles.blogsContainer}>
-        {blogs?.data?.map(({ attributes, id }) => {
-          const coverImage = attributes?.cardImage?.data?.map(
-            ({ attributes }) => attributes.formats.small.url
-          ); //to fetch the cover Image
-          return (
-            <BlogPost
-              key={id}
-              image={apiURL + coverImage}
-              title={attributes.title}
-              summary={attributes.summary}
-              postDate={attributes.date}
-            />
-          );
-        })}
+        {blogs.data &&
+          blogs?.data?.map(
+            ({ attributes: { uid, title, summary, date, cardImage } }) => {
+              const coverImage = cardImage?.data?.map(
+                ({ attributes: { formats } }) => formats.small.url
+              ); //to fetch the cover Image
+
+              return (
+                <BlogPostCard
+                  key={uid}
+                  image={apiURL + coverImage}
+                  title={title}
+                  summary={summary}
+                  postDate={date}
+                  uid={uid}
+                />
+              );
+            }
+          )}
       </div>
+
       <ContactUs />
     </section>
   );

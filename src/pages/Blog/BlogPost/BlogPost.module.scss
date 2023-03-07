@@ -1,31 +1,76 @@
-.blogPostContainer {
-  background-color: #fff;
-  box-shadow: 0 5px 20px 0 rgb(0 0 0 / 5%);
-  z-index: 1;
-  width: inherit;
-  cursor: pointer;
-  .blogPostContent {
-    padding: 25px;
+.blogPostRoot {
+  .postRoot {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
   }
-  .postInfo {
-    margin: 0;
-    font-size: 14px;
-    line-height: 20px;
-    font-family: "IBM Plex Mono", monospace;
-    color: #000000;
-    font-weight: 400;
+  .postContainer {
+    width: 55%;
   }
   .postTitle {
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: 800;
+    font-size: 72px;
+    line-height: 78px;
     color: #000000;
+    font-weight: 800;
+    text-align: center;
   }
-  .postSummary {
-    color: #999999;
+  .postDate {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: 600;
   }
-  .blogImage {
-    width: -webkit-fill-available;
-    display: flex;
+  .contentText {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+    & img {
+      width: 100%;
+    }
+  }
+  .postImage {
+    margin-top: -200px;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .blogPostRoot {
+    .postContainer {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 860px) {
+  .blogPostRoot {
+    .postTitle {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .blogPostRoot {
+    .postRoot {
+      gap: 0;
+    }
+    .postContainer {
+      width: 85%;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .blogPostRoot {
+    .postTitle {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    .postImage {
+      margin-top: -180px;
+    }
   }
 }
