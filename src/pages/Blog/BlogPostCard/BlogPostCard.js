@@ -1,17 +1,10 @@
 import styles from "./BlogPostCard.module.scss";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-const BlogPostCard = ({
-  image,
-  postDate,
-  title,
-  summary,
-  handleClick,
-  uid,
-}) => {
+const BlogPostCard = ({ image, postDate, title, summary, uid }) => {
   return (
-    <div onClick={handleClick} className={styles.blogPostContainer}>
-      <Link to={uid} className={styles.link}>
+    <div className={styles.blogPostContainer}>
+      <Link to={`/blog/${uid}`} className={styles.link}>
         <img src={image} alt="blog-post-media" className={styles.blogImage} />
         <div className={styles.blogPostContent}>
           <p className={styles.postInfo}>{postDate}</p>

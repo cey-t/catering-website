@@ -2,11 +2,16 @@ import { useParams } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
 import { apiURL } from "utils/api/api";
 import ReactMarkdown from "react-markdown";
+import ContactUs from "components/ContactSection/ContactUs";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
+import BlogPostCard from "../BlogPostCard/BlogPostCard";
 import styles from "./BlogPost.module.scss";
 const BlogPost = () => {
   const { uid } = useParams();
   const [uidData, setUid] = useState({});
+  const [orderedData, setOrderedData] = useState({});
+  const sortedData = orderedData?.data?.slice(0, 3);
+
   const getBlogPostByUid = useCallback(async () => {
     try {
       const res = await fetch(
@@ -20,14 +25,27 @@ const BlogPost = () => {
       console.log(error.message);
     }
   }, [uid]);
-  console.log(uidData);
-
+  const getLastThreeBlogPosts = useCallback(async () => {
+    try {
+      const res = await fetch(
+        `${apiURL}/api/blogs?sort=date:desc&populate=cardImage`
+      );
+      const data = await res.json();
+      if (!res.ok) throw new Error("Error");
+      setOrderedData(data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, []);
+  useEffect(() => {
+    getLastThreeBlogPosts();
+  }, [getLastThreeBlogPosts]);
   useEffect(() => {
     getBlogPostByUid(uid);
   }, [uid, getBlogPostByUid]);
   return (
     <section className={styles.blogPostRoot}>
-      <HeaderContextBox />
+      <div className={styles.postHero}></div>
       {uidData?.data?.map(
         ({ attributes: { title, content, date, coverImage }, id }) => {
           const blogImage = coverImage?.data?.map(
@@ -39,7 +57,7 @@ const BlogPost = () => {
                 src={apiURL + blogImage}
                 className={styles.postImage}
                 alt="blog-post"
-                width={"80%"}
+                width={"90%"}
               />
               <div className={styles.postContainer}>
                 <h3 className={styles.postDate}>{date}</h3>
@@ -52,6 +70,29 @@ const BlogPost = () => {
           );
         }
       )}
+      <div className={styles.latestBlogsContainer}>
+        <h4 className={styles.latestBlogTitle}>Latest Posts</h4>
+        <div className={styles.sortedBlogs}>
+          {sortedData?.map(
+            ({ attributes: { title, summary, date, uid, cardImage } }) => {
+              const image = cardImage?.data?.map(
+                ({ attributes: { formats } }) => formats.small.url
+              ); //to fetch the cover Image
+              return (
+                <BlogPostCard
+                  key={uid}
+                  title={title}
+                  summary={summary}
+                  postDate={date}
+                  image={apiURL + image}
+                  uid={uid}
+                />
+              );
+            }
+          )}
+        </div>
+      </div>
+      <ContactUs />
     </section>
   );
 };
