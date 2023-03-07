@@ -3,7 +3,6 @@ import { useState, useCallback, useEffect } from "react";
 import { apiURL } from "utils/api/api";
 import ReactMarkdown from "react-markdown";
 import ContactUs from "components/ContactSection/ContactUs";
-import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import BlogPostCard from "../BlogPostCard/BlogPostCard";
 import styles from "./BlogPost.module.scss";
 const BlogPost = () => {
