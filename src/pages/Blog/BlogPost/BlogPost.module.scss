@@ -6,6 +6,20 @@
     flex-direction: column;
     align-items: center;
     gap: 100px;
+    padding-bottom: 90px;
+  }
+  .leftArrow {
+    width: 55%;
+    display: flex;
+    margin-top: 20px;
+  }
+  .postHero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: -100px;
+    padding: 150px 0px;
+    background-color: #5ab963;
   }
   .postContainer {
     width: 55%;
@@ -34,8 +48,24 @@
     }
   }
   .postImage {
-    margin-top: -200px;
-    z-index: 1;
+    margin-top: -150px;
+  }
+  .latestBlogsContainer {
+    width: 80%;
+    margin: auto;
+    border-top: 1px solid #c5c5c5;
+    padding: 90px 0 0;
+  }
+  .latestBlogTitle {
+    width: 95%;
+    margin-left: auto;
+  }
+  .sortedBlogs {
+    width: 92%;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 @media screen and (max-width: 1120px) {
@@ -51,26 +81,41 @@
       font-size: 50px;
       line-height: 60px;
     }
+    .sortedBlogs {
+      gap: 30px;
+    }
   }
 }
 @media screen and (max-width: 720px) {
   .blogPostRoot {
     .postRoot {
-      gap: 0;
+      gap: 50px;
     }
     .postContainer {
-      width: 85%;
+      width: 80%;
     }
   }
 }
 @media screen and (max-width: 575px) {
   .blogPostRoot {
     .postTitle {
-      font-size: 40px;
+      font-size: 35px;
       line-height: 45px;
+    }
+    .postDate {
+      font-size: 14px;
+      line-height: 20px;
     }
     .postImage {
       margin-top: -180px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .blogPostRoot {
+    .postTitle {
+      font-size: 25px;
+      line-height: 35px;
     }
   }
 }
