@@ -9,7 +9,6 @@
   }
   .postContainer {
     width: 55%;
-    overflow: hidden;
   }
   .postTitle {
     font-size: 72px;
@@ -30,9 +29,48 @@
     color: #000000;
     font-weight: 400;
     font-family: "IBM Plex Mono", monospace;
+    & img {
+      width: 100%;
+    }
   }
   .postImage {
     margin-top: -200px;
     z-index: 1;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .blogPostRoot {
+    .postContainer {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 860px) {
+  .blogPostRoot {
+    .postTitle {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .blogPostRoot {
+    .postRoot {
+      gap: 0;
+    }
+    .postContainer {
+      width: 85%;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .blogPostRoot {
+    .postTitle {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    .postImage {
+      margin-top: -180px;
+    }
   }
 }
