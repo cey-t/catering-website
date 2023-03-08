@@ -71,7 +71,12 @@ const About = () => {
         <Slider {...settings} className={styles.slider}>
           {Images.map((image) => (
             <div key={image.id}>
-              <img src={image.src} width={"100%"} alt={image.alt} />
+              <img
+                src={image.src}
+                width={"100%"}
+                height={"100%"}
+                alt={image.alt}
+              />
             </div>
           ))}
         </Slider>
