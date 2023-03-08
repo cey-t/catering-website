@@ -26,9 +26,11 @@ const NavBar = () => {
               {nav.label ? (
                 nav.label
               ) : (
-                <button className={styles.getStartedButton}>
-                  {nav.buttonLabel}
-                </button>
+                <Link to={"/getStarted"} className={styles.link}>
+                  <button className={styles.getStartedButton}>
+                    {nav.buttonLabel}
+                  </button>
+                </Link>
               )}
             </Link>
           ))}
