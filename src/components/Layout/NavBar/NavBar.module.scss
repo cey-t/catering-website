@@ -26,6 +26,9 @@
     font-weight: 600;
     transition: color 0.5s;
     color: #ffffff;
+    &:hover {
+      color: #006400;
+    }
   }
   .logoLink {
     display: flex;
@@ -45,7 +48,7 @@
     align-items: center;
     background-color: transparent;
     &:hover {
-      color: #000000;
+      color: #006400;
       background-color: #ffffff;
     }
   }

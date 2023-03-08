@@ -22,24 +22,7 @@
     right: 0;
     left: 0;
   }
-  .imageWrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  .sliderDot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-  }
-  .activeDot {
-    background-color: #ffffff;
-  }
+
   .aboutUs {
     text-decoration: none;
     font-size: 13px;
