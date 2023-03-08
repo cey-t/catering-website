@@ -5,6 +5,7 @@ import ContactUs from "components/ContactSection/ContactUs";
 import HeaderContextBox from "components/HeaderInnerContent/HeaderContextBox";
 import Team from "./Team/Team";
 import styles from "./About.module.scss";
+
 const About = () => {
   return (
     <section className={styles.aboutRoot}>

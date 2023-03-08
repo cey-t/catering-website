@@ -1,12 +1,56 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import ContextBox from "components/ContextBox/ContextBox";
 import egg from "images/HomePage/egg.jpg";
 import spagetti from "images/HomePage/spagetti.jpg";
 import soup from "images/HomePage/soup.jpg";
 import styles from "./About.module.scss";
-import classNames from "classnames";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const About = () => {
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const Images = [
     {
       id: 1,
@@ -20,31 +64,18 @@ const About = () => {
     },
     { id: 3, src: spagetti, alt: "spagetti" },
   ];
-  const [counter, setCounter] = useState(1);
-  const [activeDot, setActiveDot] = useState(Images[0].id);
-  const food = Images.filter((num) => num.id === counter)[0];
-  const handleSelectImage = (id) => {
-    setActiveDot(id);
-    setCounter(id);
-  };
+
   return (
     <section className={styles.aboutSection}>
       <div className={styles.imageWrapper}>
-        <img src={food.src} width={"100%"} alt={food.alt} />
-
-        <div className={styles.dotContainer}>
+        <Slider {...settings} className={styles.slider}>
           {Images.map((image) => (
-            <div
-              key={image.id}
-              onClick={() => handleSelectImage(image.id)}
-              className={classNames(styles.sliderDot, {
-                [styles.activeDot]: activeDot === image.id,
-              })}
-            ></div>
+            <div>
+              <img src={image.src} width={"100%"} alt={image.alt} />
+            </div>
           ))}
-        </div>
+        </Slider>
       </div>
-
       <div className={styles.aboutInfo}>
         <ContextBox
           span="Illud decore voluptaria has at."
