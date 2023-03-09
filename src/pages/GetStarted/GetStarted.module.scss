@@ -9,16 +9,14 @@
     justify-content: space-between;
     width: 90%;
     margin: auto;
+    gap: 20px;
   }
-  .header,
-  .form {
-    width: 50%;
-    padding: 50px 0;
-  }
+
   .form {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    width: 60%;
   }
   .inputField {
     display: flex;
@@ -55,8 +53,8 @@
     font-size: 16px;
   }
   .headerText {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 45px;
+    line-height: 50px;
     color: #f0f8ff;
     font-family: "IBM Plex Mono", monospace;
     margin: 0;
@@ -91,5 +89,39 @@
   }
   .programChoice {
     display: flex;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .getStartedRoot {
+    .getStartedContainer {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .form {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .getStartedRoot {
+    .headerText {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    .contentText {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+@media screen and (max-width: 610px) {
+  .getStartedRoot {
+    .programChoice {
+      flex-direction: column;
+      gap: 5px;
+    }
+    .input {
+      width: 90%;
+    }
   }
 }
