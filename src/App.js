@@ -7,6 +7,7 @@ import Features from "pages/Features/Features";
 import Pricing from "pages/Pricing/Pricing";
 import About from "pages/About/About";
 import Premium from "pages/Premium/Premium";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Blog from "pages/Blog/Blog";
 import GetStarted from "pages/GetStarted/GetStarted";
 import BlogPost from "pages/Blog/BlogPost/BlogPost";
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div className={styles.appContainer}>
       <Router>
+        <ScrollToTop />
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

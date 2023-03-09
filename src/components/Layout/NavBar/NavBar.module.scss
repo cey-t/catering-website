@@ -41,6 +41,7 @@
     border: 3px solid #ffffff;
     border-radius: 4px;
     font-size: 14px;
+    color: #ffffff;
     padding: 25px;
     background-color: transparent;
     &:hover {
@@ -88,6 +89,7 @@
       background-color: #5ab963;
       justify-content: space-between;
       box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%);
+      z-index: 2;
     }
     .mobileButton {
       width: 90%;
