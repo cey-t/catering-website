@@ -9,7 +9,7 @@ const Button = ({ label, onClick, className, buttonContainer, link }) => {
     >
       {link ? (
         <Link to={"/getStarted"} className={styles.link}>
-          <button className={classNames(styles.button, className)}>
+          <button className={classNames(className, styles.button)}>
             {label}
           </button>
         </Link>

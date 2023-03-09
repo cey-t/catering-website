@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { navLinks } from "utils/data/navLinks";
 import logo from "images/logo.svg";
+import Button from "components/Button/Button";
 import hamburger from "images/hamburger.svg";
 import styles from "./NavBar.module.scss";
 import classNames from "classnames";
@@ -26,9 +27,10 @@ const NavBar = () => {
               {nav.label ? (
                 nav.label
               ) : (
-                <button className={styles.getStartedButton}>
-                  {nav.buttonLabel}
-                </button>
+                <Button
+                  label={nav.buttonLabel}
+                  className={styles.getStartedButton}
+                />
               )}
             </Link>
           ))}

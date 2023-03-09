@@ -67,18 +67,8 @@
     color: #f0f8ff;
   }
   .submitButton {
-    width: fit-content;
-    height: 45px;
-    cursor: pointer;
     border: 3px solid #ffffff;
-    border-radius: 4px;
-    font-weight: 600;
     font-size: 14px;
-    color: #ffffff;
-    padding: 25px;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
     &:hover {
       color: #006400;
       background-color: #ffffff;
