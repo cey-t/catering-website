@@ -8,8 +8,10 @@ import Pricing from "pages/Pricing/Pricing";
 import About from "pages/About/About";
 import Premium from "pages/Premium/Premium";
 import Blog from "pages/Blog/Blog";
+import GetStarted from "pages/GetStarted/GetStarted";
 import BlogPost from "pages/Blog/BlogPost/BlogPost";
 import ContactUs from "pages/ContactUs/ContactUs";
+
 const App = () => {
   return (
     <div className={styles.appContainer}>
@@ -21,9 +23,10 @@ const App = () => {
           <Route path="/premium" element={<Premium />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Blog/:uid" element={<BlogPost />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:uid" element={<BlogPost />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/getStarted" element={<GetStarted />} />
         </Routes>
         <Footer />
       </Router>

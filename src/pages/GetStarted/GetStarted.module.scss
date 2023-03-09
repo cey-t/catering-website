@@ -1,0 +1,127 @@
+.getStartedRoot {
+  background-color: #5ab963;
+  width: 100%;
+  margin-top: -100px;
+  padding: 150px 0px;
+  height: auto;
+  .getStartedContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    gap: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 60%;
+  }
+  .inputField {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .formContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    width: 50%;
+    height: 50px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+    border-bottom: 1px solid#ffffff;
+
+    &::placeholder {
+      color: #ffffff;
+      opacity: 0.2;
+    }
+  }
+  .checkBoxText {
+    border: none;
+    font-size: 16px;
+  }
+  .headerText {
+    font-size: 45px;
+    line-height: 50px;
+    color: #f0f8ff;
+    font-family: "IBM Plex Mono", monospace;
+    margin: 0;
+  }
+
+  .contentText {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    line-height: 30px;
+    color: #f0f8ff;
+  }
+  .submitButton {
+    width: fit-content;
+    height: 45px;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    &:hover {
+      color: #006400;
+      background-color: #ffffff;
+    }
+  }
+  .formMessage {
+    color: #444444;
+  }
+  .programChoice {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .getStartedRoot {
+    .getStartedContainer {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .form {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .getStartedRoot {
+    .headerText {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    .contentText {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+@media screen and (max-width: 610px) {
+  .getStartedRoot {
+    .programChoice {
+      flex-direction: column;
+      gap: 5px;
+    }
+    .input {
+      width: 90%;
+    }
+  }
+}
