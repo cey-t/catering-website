@@ -27,7 +27,7 @@ export const navLinks = [
   {
     id: 6,
     buttonLabel: "Get Started",
-    path: "#",
+    path: "/getStarted",
   },
   { id: 7, label: "Blog", path: "/blog" },
   { id: 8, label: "Contact", path: "/contact" },

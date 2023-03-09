@@ -26,11 +26,9 @@ const NavBar = () => {
               {nav.label ? (
                 nav.label
               ) : (
-                <Link to={"/getStarted"} className={styles.link}>
-                  <button className={styles.getStartedButton}>
-                    {nav.buttonLabel}
-                  </button>
-                </Link>
+                <button className={styles.getStartedButton}>
+                  {nav.buttonLabel}
+                </button>
               )}
             </Link>
           ))}
