@@ -6,12 +6,26 @@ const GetStarted = () => {
     name: "",
     email: "",
     message: "",
+    type: "",
   });
   const [submissionMessage, setSubmitMessage] = useState(false);
   const resetData = () => {
     setFormData({ name: "", email: "", message: "" });
   };
-
+  const programType = [
+    {
+      id: "starterProgram",
+      value: "Started Program",
+    },
+    {
+      id: "mediumProgram",
+      value: "Medium Program",
+    },
+    {
+      id: "premiumProgram",
+      value: "Premium Program",
+    },
+  ];
   const submitForm = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -73,6 +87,30 @@ const GetStarted = () => {
                   }
                   placeholder="Tell us all about it!"
                 />
+
+                <div className={styles.programChoice}>
+                  {programType.map((program) => (
+                    <div key={program.id}>
+                      <label
+                        htmlFor={program.id}
+                        className={classNames(
+                          styles.checkBoxText,
+                          styles.input
+                        )}
+                      >
+                        <input
+                          type="radio"
+                          name="group"
+                          value={program.value}
+                          onChange={(e) =>
+                            setFormData({ ...formData, type: e.target.value })
+                          }
+                        />
+                        {program.value}
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
               <button className={styles.submitButton}>Submit </button>
             </form>

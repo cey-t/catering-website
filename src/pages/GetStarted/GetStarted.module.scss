@@ -3,8 +3,7 @@
   width: 100%;
   margin-top: -100px;
   padding: 150px 0px;
-
-  height: 100vh;
+  height: auto;
   .getStartedContainer {
     display: flex;
     justify-content: space-between;
@@ -48,9 +47,13 @@
 
     &::placeholder {
       color: #ffffff;
+      opacity: 0.2;
     }
   }
-
+  .checkBoxText {
+    border: none;
+    font-size: 16px;
+  }
   .headerText {
     font-size: 50px;
     line-height: 60px;
@@ -85,5 +88,8 @@
   }
   .formMessage {
     color: #444444;
+  }
+  .programChoice {
+    display: flex;
   }
 }
