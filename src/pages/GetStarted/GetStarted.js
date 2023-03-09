@@ -1,5 +1,6 @@
-import styles from "./GetStarted.module.scss";
 import { useState } from "react";
+import Button from "components/Button/Button";
+import styles from "./GetStarted.module.scss";
 import classNames from "classnames";
 const GetStarted = () => {
   const [formData, setFormData] = useState({
@@ -112,7 +113,7 @@ const GetStarted = () => {
                   ))}
                 </div>
               </div>
-              <button className={styles.submitButton}>Submit </button>
+              <Button label="Submit" className={styles.submitButton} />
             </form>
           )}
         </div>

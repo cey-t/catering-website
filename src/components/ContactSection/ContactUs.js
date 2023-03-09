@@ -12,7 +12,7 @@ const ContactUs = () => {
         />
       </div>
       <div className={styles.getStartedButton}>
-        <Button label="Get Started" />
+        <Button label="Get Started" link />
       </div>
     </section>
   );
