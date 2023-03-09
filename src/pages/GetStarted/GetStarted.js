@@ -114,7 +114,6 @@ const GetStarted = () => {
                 </div>
               </div>
               <Button label="Submit" className={styles.submitButton} />
-              {/* <button className={styles.submitButton}>Submit </button> */}
             </form>
           )}
         </div>
