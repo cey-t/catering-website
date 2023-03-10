@@ -1,29 +1,36 @@
 # Catering Website
 
-## Aim
+This repository contains the code for catering website built using React JS
+and Strapi CMS. The website features a modern, responsive design and allows users to browse
+catering services and related blogs.
 
-The aim of this project is to turn a UI/UX design into a functional website using React JS.
-By doing this, I want to improve my coding skills and gain more experience.
-Through this project I want to achieve following:
+## Getting Started
 
-- Improve my front-end development skills: I want to gain experience with React js and Sass by
-  designing and building an attractive and user-friendly website that showcases my catering services.
-- Translate a design into code: By working with an existing design, I hope to improve my skills in
-  translating UI/UX design into code. This will help me develop a better understanding of how to create
-  websites that are not only beatiful but also functional and user-friendly
-- Develop a portfolio piece: I plan to use this website as part of my portfolioto showcase my skills to
-  potential clients and employers. By turning a design into a website, I hope to demonstrate my ability
-  to design and develop beatiful and responsive user interfaces.
-- Improve my API integration skills : By using WordPress blog as part of my website, I hope to improve my
-  skills in integrating third-party APIs into my projects. This will help me develop better understanding
-  of how to create websites that rely on external data sources, which is important skill for modern web design.
+To get started, clone this repository to your local machine using following command:
 
-## Dependencies
+`git clone https://github.com/cey-t/catering-website.git`
 
-This project uses the Yarn package manage depencies. I prefer to use Yarn because it is fast and reliable tool
-for installing and managing packages, and it provides number of advantages over other package managers.
+Once the repository cloned, navigate to the project directory and install the necessary dependencies
+by running :
 
-You need to install the dependencies by using `yarn install` command
-By using yarn I am ensure that my project's dependencies are up to date and that the installation process
-fast and efficient.If you have any questions or issues with the installation process, please refer to the
-Yarn documentation or open an issue on this project's GitHub repository.
+`yarn install`
+
+After dependencies installed, you can start the development server by running :
+
+`yarn start`
+
+This will start the development server and open the website in your default browser at
+
+`http://localhost:3000`
+
+## Project Structure
+
+The project structure as follows:
+
+- `public/` : Contains static assets that are served as-is by the development server.
+- `src/`: Contains the main source code of the project
+  - `components/`: Contains reusable components used throughout the project
+  - `pages/`: Contains react components that represents the various pages of the website
+  - `utils/`: Contains data and external Api Url link
+  - `App.js/`: Main react component that represent the website.
+- `package.json` : Contains meta data about the project and a list of its dependencies.
