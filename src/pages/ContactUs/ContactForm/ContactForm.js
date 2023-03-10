@@ -1,24 +1,39 @@
 import ContextBox from "components/ContextBox/ContextBox";
 import { useState } from "react";
 import Button from "components/Button/Button";
+import { apiURL } from "utils/api/api";
 import styles from "./ContactForm.module.scss";
 import classNames from "classnames";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    inquiry: "",
   });
   const [formMessage, setFormMessage] = useState(false);
 
   const resetForm = () => {
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", inquiry: "" });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
-    resetForm();
-    setFormMessage(true);
+    try {
+      const res = await fetch(`${apiURL}/api/inquiries`, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          data: formData,
+        }),
+      });
+      if (!res.ok) throw new Error("Something went wrong");
+      const data = await res.json();
+      setFormData(data);
+      resetForm();
+      setFormMessage(true);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
   return (
     <section className={styles.contactFormRoot}>
@@ -80,9 +95,9 @@ const ContactForm = () => {
                 <textarea
                   type="text"
                   onChange={(e) => {
-                    setFormData({ ...formData, message: e.target.value });
+                    setFormData({ ...formData, inquiry: e.target.value });
                   }}
-                  value={formData.message}
+                  value={formData.inquiry}
                   className={styles.input}
                   placeholder="Tell us all about it"
                   required
