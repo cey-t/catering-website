@@ -2,48 +2,88 @@ import { useState } from "react";
 import Button from "components/Button/Button";
 import styles from "./GetStarted.module.scss";
 import classNames from "classnames";
+import { apiURL } from "utils/api/api";
 const GetStarted = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
     message: "",
+    phoneNumber: "",
+    date: "",
     type: "",
   });
   const [submissionMessage, setSubmitMessage] = useState(false);
   const resetData = () => {
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({
+      fullName: "",
+      email: "",
+      message: "",
+      date: "",
+      type: "",
+      phoneNumber: "",
+    });
   };
   const programType = [
     {
       id: "starterProgram",
-      value: "Started Program",
+      value: "Minimal Party",
     },
     {
       id: "mediumProgram",
-      value: "Medium Program",
+      value: "Medial Party",
     },
     {
       id: "premiumProgram",
-      value: "Premium Program",
+      value: "Premium Party",
     },
   ];
-  const submitForm = (event) => {
+  // const submitForm = async (event) => {
+  //   event.preventDefault();
+  //   try {
+  //     const res = await fetch(`${apiURL}/api/customise-plans`, {
+  //       method: "POST",
+  //       mode: "cors",
+  //       headers: { "Content-type": "application/json" },
+  //       body: JSON.stringify({ data: formData }),
+  //     });
+  //     if (!res.ok) throw new Error("Something went wrong");
+  //     const data = res.json();
+  //     console.log(data);
+  //     // setFormData(data);
+  //     console.log(formData);
+  //     resetData();
+  //     setSubmitMessage(true);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+  const submitForm = async (event) => {
     event.preventDefault();
-    console.log(formData);
-    resetData();
-    setSubmitMessage(true);
+    try {
+      const res = await fetch(`${apiURL}/api/customise-plans`, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          data: formData,
+        }),
+      });
+      if (!res.ok) throw new Error("Something went wrong");
+      const data = await res.json();
+      setFormData(data);
+      resetData();
+      setSubmitMessage(true);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
   return (
     <section className={styles.getStartedRoot}>
       <div className={styles.getStartedContainer}>
-        <div className={styles.header}>
-          <h1 className={styles.headerText}>Join Us</h1>
-          <p className={styles.contentText}>Let us help you to join us!</p>
-        </div>
         <div className={styles.form}>
           <div>
             <h1 className={classNames(styles.headerText, styles.getStarted)}>
-              Get Started
+              Craft Your Ideal Catering Experience with Our Customizable Menus
             </h1>
             <p className={classNames(styles.contentText, styles.getStarted)}>
               Fill this form to get in touch with us!
@@ -62,9 +102,9 @@ const GetStarted = () => {
                   required
                   className={styles.input}
                   placeholder="Full Name"
-                  value={formData.name}
+                  value={formData.fullName}
                   onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
+                    setFormData({ ...formData, fullName: e.target.value })
                   }
                   name="name"
                 />
@@ -78,10 +118,29 @@ const GetStarted = () => {
                   }
                   placeholder="claire@gmail.com"
                 />
+                <input
+                  type="tel"
+                  required
+                  className={styles.input}
+                  value={formData.phoneNumber}
+                  placeholder="+90 541 854 92 90"
+                  onChange={(e) =>
+                    setFormData({ ...formData, phoneNumber: e.target.value })
+                  }
+                />
+                <input
+                  type="date"
+                  required
+                  className={styles.input}
+                  value={formData.date}
+                  onChange={(e) =>
+                    setFormData({ ...formData, date: e.target.value })
+                  }
+                />
                 <textarea
                   type="text"
                   required
-                  className={styles.input}
+                  className={classNames(styles.input, styles.textArea)}
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
