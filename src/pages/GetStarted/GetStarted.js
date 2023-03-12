@@ -112,6 +112,7 @@ const GetStarted = () => {
                 <input
                   type="date"
                   required
+                  placeholder="mm/dd/yyyy"
                   className={styles.input}
                   value={formData.date}
                   onChange={(e) =>
