@@ -55,7 +55,6 @@
     color: #f0f8ff;
     font-family: "IBM Plex Mono", monospace;
     margin: 0;
-    width: 75%;
   }
 
   .contentText {
@@ -91,10 +90,6 @@
 }
 @media screen and (max-width: 1010px) {
   .getStartedRoot {
-    .getStartedContainer {
-      flex-direction: column;
-      gap: 50px;
-    }
     .form {
       width: 100%;
     }
@@ -120,6 +115,14 @@
     }
     .input {
       width: 90%;
+    }
+  }
+}
+@media screen and (max-width: 510px) {
+  .getStartedRoot {
+    .headerText {
+      font-size: 25px;
+      line-height: 35px;
     }
   }
 }

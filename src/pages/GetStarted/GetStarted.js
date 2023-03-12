@@ -64,7 +64,7 @@ const GetStarted = () => {
         <div className={styles.form}>
           <div>
             <h1 className={classNames(styles.headerText, styles.getStarted)}>
-              Craft Your Ideal Catering Experience with Our Customizable Menus
+              Craft Your Ideal Catering Experience
             </h1>
             <p className={classNames(styles.contentText, styles.getStarted)}>
               Fill this form to get in touch with us!
