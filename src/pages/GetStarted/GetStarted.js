@@ -37,26 +37,7 @@ const GetStarted = () => {
       value: "Premium Party",
     },
   ];
-  // const submitForm = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     const res = await fetch(`${apiURL}/api/customise-plans`, {
-  //       method: "POST",
-  //       mode: "cors",
-  //       headers: { "Content-type": "application/json" },
-  //       body: JSON.stringify({ data: formData }),
-  //     });
-  //     if (!res.ok) throw new Error("Something went wrong");
-  //     const data = res.json();
-  //     console.log(data);
-  //     // setFormData(data);
-  //     console.log(formData);
-  //     resetData();
-  //     setSubmitMessage(true);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+
   const submitForm = async (event) => {
     event.preventDefault();
     try {
