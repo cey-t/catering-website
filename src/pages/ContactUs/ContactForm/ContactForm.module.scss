@@ -16,6 +16,9 @@
     font-weight: 400;
     font-family: "IBM Plex Mono", monospace;
   }
+  .textArea {
+    resize: vertical;
+  }
   .contactBox {
     display: flex;
     gap: 10px;

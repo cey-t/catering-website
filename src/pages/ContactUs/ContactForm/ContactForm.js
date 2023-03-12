@@ -98,7 +98,7 @@ const ContactForm = () => {
                     setFormData({ ...formData, inquiry: e.target.value });
                   }}
                   value={formData.inquiry}
-                  className={styles.input}
+                  className={classNames(styles.input, styles.textArea)}
                   placeholder="Tell us all about it"
                   required
                 />
