@@ -101,10 +101,11 @@ const GetStarted = () => {
                 />
                 <input
                   type="tel"
+                  pattern="^\d{4} \d{3} \d{4}$"
                   required
                   className={styles.input}
                   value={formData.phoneNumber}
-                  placeholder="+90 541 854 92 90"
+                  placeholder="0541 854 92 90"
                   onChange={(e) =>
                     setFormData({ ...formData, phoneNumber: e.target.value })
                   }
