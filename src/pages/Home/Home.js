@@ -15,7 +15,7 @@ const Home = () => {
               Propel comes with everything you need to get your business
               rolling.
             </p>
-            <Button label="Get Started" link />
+            <Button label="Get Started" link="/getStarted" />
           </div>
         </div>
       </section>
