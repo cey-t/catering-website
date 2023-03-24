@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { AuthContext } from "context/AuthContext";
 import { API, BEARER } from "constant";
 import { getToken } from "helper";
@@ -34,14 +34,11 @@ const AuthProvider = ({ children }) => {
       fetchLoggedInUser(authToken);
     }
   }, [authToken]);
-
-  return (
-    <AuthContext.Provider
-      value={{ user: userData, setUser: handleUser, isLoading }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+  const value = useMemo(() => {
+    //useMemo prevent unnecessary re-renders -depend on AuthContext
+    return { user: userData, setUser: handleUser, isLoading };
+  }, [userData, isLoading]);
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
 export default AuthProvider;
