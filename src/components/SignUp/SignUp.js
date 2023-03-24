@@ -21,11 +21,6 @@ const SignUp = () => {
   const signUp = async (e) => {
     e.preventDefault();
     try {
-      // const value = {
-      //   identifier: newUser.email,
-      //   password: newUser.password,
-      //   name: newUser.name,
-      // };
       const res = await fetch(`${API}/auth/local/register`, {
         method: "POST",
         mode: "cors",

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { AuthContext } from "../../context/AuthContext";
-import { API, BEARER } from "../../constant";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { AuthContext } from "context/AuthContext";
+import { API, BEARER } from "constant";
 import { getToken } from "helper";
 const AuthProvider = ({ children }) => {
   const [userData, setUserData] = useState();

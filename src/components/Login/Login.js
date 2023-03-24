@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import styles from "./Login.module.scss";
 import { useAuthContext } from "context/AuthContext";
-import { useNavigate } from "react-router-dom";
 import { API } from "constant";
 import { setToken } from "helper";
 
