@@ -13,6 +13,7 @@ import GetStarted from "pages/GetStarted/GetStarted";
 import BlogPost from "pages/Blog/BlogPost/BlogPost";
 import ContactUs from "pages/ContactUs/ContactUs";
 import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
 const App = () => {
   return (
     <div className={styles.appContainer}>
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/getStarted" element={<GetStarted />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
         <Footer />
       </Router>

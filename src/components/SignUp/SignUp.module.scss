@@ -1,4 +1,4 @@
-.loginRoot {
+.signUpPage {
   background-color: #0a0e1a;
 
   height: auto;
@@ -53,17 +53,6 @@
       color: #000000;
       opacity: 0.9;
       background-color: #ffffff;
-    }
-  }
-  .signupLink {
-    font-size: 16px;
-    line-height: 25px;
-    color: #ffffff;
-    font-weight: 400;
-    margin: 0;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
     }
   }
 }
