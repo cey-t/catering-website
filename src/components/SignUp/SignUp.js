@@ -83,7 +83,6 @@ const SignUp = () => {
         </div>
         <Button
           label="Log In"
-          // onClick={signUp}
           buttonContainer={styles.buttonContainer}
           className={styles.button}
         />
