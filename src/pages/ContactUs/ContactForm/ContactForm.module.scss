@@ -31,35 +31,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .contactForm {
-    display: flex;
-    width: 70%;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .input {
-    width: -webkit-fill-available;
-    border: none;
-    border-bottom: 1px solid #b3b3b3;
-    outline: none;
-    padding: 20px 10px;
-    font-family: "IBM Plex Mono", monospace;
-    overflow: hidden;
-    &:focus {
-      border-bottom: 1px solid #000000;
-    }
-  }
-  .submitButton {
-    margin-top: 50px;
-  }
 }
-@media screen and (max-width: 1024px) {
-  .contactFormRoot {
-    .contactForm {
-      width: 100%;
-    }
-  }
-}
+
 @media screen and (max-width: 570px) {
   .contactFormRoot {
     gap: 70px;

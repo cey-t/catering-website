@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "context/AuthContext";
 import { API } from "constant";
 import { setToken } from "helper";
-import { notification } from "antd";
+// import { notification } from "antd";
 import { SignUpInputs } from "utils/data/inputData";
 import Form from "../Form/Form";
 import styles from "./Login.module.scss";
@@ -30,21 +30,22 @@ const Login = () => {
       if (data?.error) {
         throw data?.error;
       } else {
-        notification["success"]({
-          message: "Login Successful",
-          description: ` Welcome back ${data.user.username} !`,
-          duration: 5,
-        });
+        // notification["success"]({
+        //   message: "Login Successful",
+        //   description: ` Welcome back ${data.user.username} !`,
+        //   duration: 5,
+        // });
         setToken(data.jwt);
         setUser(data.user);
         navigate("/blog", { replace: true });
       }
     } catch (error) {
-      notification["error"]({
-        message: "Sign Up Failed",
-        description: error.message,
-        duration: 5,
-      });
+      console.log(error);
+      // notification["error"]({
+      //   message: "Sign Up Failed",
+      //   description: error.message,
+      //   duration: 5,
+      // });
     }
   };
   return (
