@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { setToken } from "helper";
 import { SignUpInputs } from "utils/data/inputData";
 import Form from "../Form/Form";
+import { notification } from "antd";
 const SignUp = () => {
   const { setUser } = useAuthContext();
-  console.log(setUser);
   const navigate = useNavigate();
 
   const signUp = async (e) => {
@@ -21,17 +21,25 @@ const SignUp = () => {
         body: JSON.stringify(e),
       });
       const data = await res.json();
-      console.log(data);
       if (data?.error) {
         throw data?.error;
       } else {
+        notification["success"]({
+          message: "Sign Up Successful",
+          description: "Congratulations! You have successfully signed up. ",
+          duration: 5,
+        });
         setToken(data.jwt);
         setUser(data.user);
         console.log(`Welcome ${data.user.username}`);
         navigate("/login", { replace: true });
       }
     } catch (error) {
-      console.log(error);
+      notification["error"]({
+        message: "Sign Up Failed",
+        description: error.message,
+        duration: 5,
+      });
     }
   };
 
