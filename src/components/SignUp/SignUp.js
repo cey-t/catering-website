@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { setToken } from "helper";
 import { SignUpInputs } from "utils/data/inputData";
 import Form from "../Form/Form";
-// import { notification } from "antd";
+import { notification } from "antd";
 const SignUp = () => {
   const { setUser } = useAuthContext();
   const navigate = useNavigate();
@@ -24,21 +24,21 @@ const SignUp = () => {
       if (data?.error) {
         throw data?.error;
       } else {
-        // notification["success"]({
-        //   message: "Sign Up Successful",
-        //   description: "Congratulations! You have successfully signed up. ",
-        //   duration: 5,
-        // });
+        notification["success"]({
+          message: "Sign Up Successful",
+          description: "Congratulations! You have successfully signed up. ",
+          duration: 5,
+        });
         setToken(data.jwt);
         setUser(data.user);
         navigate("/login", { replace: true });
       }
     } catch (error) {
-      // notification["error"]({
-      //   message: "Sign Up Failed",
-      //   description: error.message,
-      //   duration: 5,
-      // });
+      notification["error"]({
+        message: "Sign Up Failed",
+        description: error.message,
+        duration: 5,
+      });
     }
   };
 
