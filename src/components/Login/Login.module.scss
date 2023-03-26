@@ -1,6 +1,5 @@
 .loginRoot {
   background-color: #0a0e1a;
-
   height: auto;
   width: 100%;
   display: flex;
@@ -8,62 +7,4 @@
   padding: 150px 0px;
   justify-content: center;
   align-items: center;
-  .formContainer {
-    width: 40%;
-    display: flex;
-    border-radius: 20px;
-    padding: 100px 50px;
-    gap: 15px;
-    flex-direction: column;
-  }
-  .inputLabel {
-    font-size: 30px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: "IBM Plex Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .inputBox {
-    height: 40px;
-    padding: 5px 10px;
-    outline: none;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-  }
-  .formInputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .buttonContainer {
-    width: 50%;
-  }
-  .button {
-    width: 100%;
-    justify-content: center;
-    border: 3px solid #ffffff;
-    font-size: 14px;
-    border-radius: 10px;
-    text-decoration: underline;
-    background-color: #0a0e1a;
-
-    &:hover {
-      color: #000000;
-      opacity: 0.9;
-      background-color: #ffffff;
-    }
-  }
-  .signupLink {
-    font-size: 16px;
-    line-height: 25px;
-    color: #ffffff;
-    font-weight: 400;
-    margin: 0;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
