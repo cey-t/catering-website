@@ -1,0 +1,24 @@
+.formInput {
+  .formInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .inputLabel {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .inputBox {
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    width: 80%;
+  }
+}

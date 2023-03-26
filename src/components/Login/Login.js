@@ -1,29 +1,21 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
-import styles from "./Login.module.scss";
+import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "context/AuthContext";
 import { API } from "constant";
 import { setToken } from "helper";
+import { SignUpInputs } from "utils/data/inputData";
+import Form from "../Form/Form";
+import styles from "./Login.module.scss";
 
 const Login = () => {
-  const [user, settUser] = useState({ email: "", password: "" });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    settUser({ ...user, [name]: value });
-  };
+  const loginInputsData = SignUpInputs.slice(1, 3);
   const { setUser } = useAuthContext();
   const navigate = useNavigate();
 
-  const resetForm = () => {
-    settUser({ email: "", password: "" });
-  };
-  const logIn = async (e) => {
-    e.preventDefault();
+  const login = async (e) => {
     try {
       const value = {
-        identifier: user.email,
-        password: user.password,
+        identifier: e.email,
+        password: e.password,
       };
       const res = await fetch(`${API}/auth/local`, {
         method: "POST",
@@ -41,7 +33,6 @@ const Login = () => {
         setToken(data.jwt);
         setUser(data.user);
         navigate("/blog", { replace: true });
-        resetForm();
       }
     } catch (error) {
       console.log(error);
@@ -49,42 +40,12 @@ const Login = () => {
   };
   return (
     <section className={styles.loginRoot}>
-      <form onSubmit={logIn} className={styles.formContainer}>
-        <div className={styles.formInputs}>
-          <label className={styles.inputLabel}>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={user.email}
-              onChange={handleChange}
-              className={styles.inputBox}
-              placeholder="ceydatoker2209@gmail.com"
-            />
-          </label>
-          <label className={styles.inputLabel}>
-            Password
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              value={user.password}
-              className={styles.inputBox}
-              placeholder="**********"
-            />
-          </label>
-        </div>
-        <Button
-          label="Log In"
-          // onClick={logIn}s
-          buttonContainer={styles.buttonContainer}
-          className={styles.button}
-        />
-
-        <Link to="/signup" className={styles.signupLink}>
-          Sign up
-        </Link>
-      </form>
+      <Form
+        link
+        onSubmit={login}
+        inputs={loginInputsData}
+        buttonLabel="Log In"
+      />
     </section>
   );
 };
