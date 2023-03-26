@@ -3,7 +3,7 @@ import { useState } from "react";
 import Input from "./Input/Input";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-const Form = ({ onSubmit, inputs, buttonLabel, link }) => {
+const Form = ({ onSubmit, inputs, buttonLabel, link, textArea }) => {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {

@@ -31,7 +31,6 @@ const SignUp = () => {
         });
         setToken(data.jwt);
         setUser(data.user);
-        console.log(`Welcome ${data.user.username}`);
         navigate("/login", { replace: true });
       }
     } catch (error) {
