@@ -1,35 +1,25 @@
-import ContextBox from "components/ContextBox/ContextBox";
 import { useState } from "react";
-import Button from "components/Button/Button";
+import ContextBox from "components/ContextBox/ContextBox";
+import { contactFormData } from "utils/data/inputData";
 import { apiURL } from "utils/api/api";
 import styles from "./ContactForm.module.scss";
+import Form from "components/Form/Form";
 import classNames from "classnames";
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    inquiry: "",
-  });
   const [formMessage, setFormMessage] = useState(false);
 
-  const resetForm = () => {
-    setFormData({ name: "", email: "", inquiry: "" });
-  };
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
     try {
       const res = await fetch(`${apiURL}/api/inquiries`, {
         method: "POST",
         mode: "cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          data: formData,
+          data: e,
         }),
       });
       if (!res.ok) throw new Error("Something went wrong");
-      const data = await res.json();
-      setFormData(data);
-      resetForm();
+
       setFormMessage(true);
     } catch (error) {
       console.log(error.message);
@@ -61,53 +51,15 @@ const ContactForm = () => {
             </p>
           </div>
         </div>
-        <div className={styles.contactForm}>
-          {formMessage ? (
-            <h3 className={styles.contactText}>Form submitted successfully!</h3>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <div className={styles.inputContainer}>
-                <input
-                  type="text"
-                  required
-                  onChange={(e) => {
-                    setFormData({ ...formData, name: e.target.value });
-                  }}
-                  value={formData.name}
-                  className={styles.input}
-                  placeholder="Name"
-                  name="name"
-                />
-              </div>
-              <div className={styles.inputContainer}>
-                <input
-                  type="email"
-                  onChange={(e) => {
-                    setFormData({ ...formData, email: e.target.value });
-                  }}
-                  value={formData.email}
-                  required
-                  className={styles.input}
-                  placeholder="Email"
-                />
-              </div>
-              <div className={styles.inputContainer}>
-                <textarea
-                  type="text"
-                  onChange={(e) => {
-                    setFormData({ ...formData, inquiry: e.target.value });
-                  }}
-                  value={formData.inquiry}
-                  className={classNames(styles.input, styles.textArea)}
-                  placeholder="Tell us all about it"
-                  required
-                />
-              </div>
-
-              <Button label="Submit" className={styles.submitButton} />
-            </form>
-          )}
-        </div>
+        {formMessage ? (
+          <h3 className={styles.contactText}>Form submitted successfully!</h3>
+        ) : (
+          <Form
+            onSubmit={handleSubmit}
+            inputs={contactFormData}
+            buttonLabel="Submit"
+          />
+        )}
       </div>
     </section>
   );

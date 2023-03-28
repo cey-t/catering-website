@@ -1,0 +1,55 @@
+.formContainer {
+  width: 100%;
+}
+.form {
+  width: 40%;
+  display: flex;
+  border-radius: 20px;
+  padding: 100px 50px;
+  gap: 15px;
+  flex-direction: column;
+  .buttonContainer {
+    width: 50%;
+  }
+  .button {
+    width: 100%;
+    justify-content: center;
+    border: 3px solid #ffffff;
+    font-size: 14px;
+    border-radius: 10px;
+    text-decoration: underline;
+    background-color: #0a0e1a;
+
+    &:hover {
+      color: #000000;
+      opacity: 0.9;
+      background-color: #ffffff;
+    }
+  }
+  .signupLink {
+    font-size: 16px;
+    line-height: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .form {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .form {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .form {
+    width: 95%;
+  }
+}

@@ -16,7 +16,7 @@ const PricingBox = ({ type, price, content, contains, borderStyle }) => {
         <p className={styles.containsText}>{contains}</p>
       </div>
       <Button
-        link
+        link="/getStarted"
         buttonContainer={styles.getStartedButton}
         className={styles.button}
         label="Get Started"

@@ -22,7 +22,7 @@ export const navLinks = [
   {
     id: 5,
     label: "Sign in",
-    path: "#",
+    path: "/login",
   },
   {
     id: 6,
