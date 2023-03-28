@@ -38,3 +38,18 @@
     }
   }
 }
+@media screen and (max-width: 1000px) {
+  .form {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .form {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .form {
+    width: 95%;
+  }
+}

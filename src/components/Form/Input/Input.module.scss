@@ -1,9 +1,8 @@
 .formInput {
-  .formInputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
   .inputLabel {
     font-size: 30px;
     color: #ffffff;
@@ -14,11 +13,11 @@
     gap: 5px;
   }
   .inputBox {
-    height: 40px;
+    height: 55px;
     padding: 5px 10px;
     outline: none;
     border: 2px solid #ffffff;
     border-radius: 10px;
-    width: 80%;
+    width: 95%;
   }
 }
