@@ -1,10 +1,12 @@
 import styles from "./SignUp.module.scss";
 import { useAuthContext } from "context/AuthContext";
+import React from "react";
 import { API } from "constant";
 import { useNavigate } from "react-router-dom";
 import { setToken } from "helper";
 import { SignUpInputs } from "utils/data/inputData";
 import Form from "../Form/Form";
+import { notification } from "antd";
 const SignUp = () => {
   const { setUser } = useAuthContext();
   const navigate = useNavigate();
@@ -23,13 +25,21 @@ const SignUp = () => {
       if (data?.error) {
         throw data?.error;
       } else {
-        console.log("success");
+        notification["success"]({
+          message: "Sign Up Successful",
+          description: "Congratulations! You have successfully signed up. ",
+          duration: 5,
+        });
         setToken(data.jwt);
         setUser(data.user);
         navigate("/login", { replace: true });
       }
     } catch (error) {
-      console.log(error);
+      notification["error"]({
+        message: "Sign Up Failed",
+        description: error.message,
+        duration: 5,
+      });
     }
   };
 
