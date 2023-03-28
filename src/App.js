@@ -14,7 +14,7 @@ import BlogPost from "pages/Blog/BlogPost/BlogPost";
 import ContactUs from "pages/ContactUs/ContactUs";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
-import "antd/dist/antd.css";
+import "antd/dist/reset.css";
 const App = () => {
   return (
     <div className={styles.appContainer}>
