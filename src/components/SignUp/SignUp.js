@@ -1,5 +1,6 @@
 import styles from "./SignUp.module.scss";
 import { useAuthContext } from "context/AuthContext";
+import React from "react";
 import { API } from "constant";
 import { useNavigate } from "react-router-dom";
 import { setToken } from "helper";
