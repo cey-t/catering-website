@@ -8,7 +8,6 @@
   .contextBox {
     width: 69%;
   }
-
   .contactText {
     font-size: 14px;
     line-height: 24px;
@@ -30,6 +29,16 @@
   .contactFormContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .form {
+    padding: 0;
+    width: 80%;
+  }
+  .inputStyle {
+    &:focus {
+      border-radius: 2px;
+      border-bottom: 1px solid #b3b3b3;
+    }
   }
 }
 
