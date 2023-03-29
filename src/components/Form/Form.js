@@ -1,9 +1,17 @@
-import styles from "./Form.module.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Input from "./Input/Input";
 import Button from "../Button/Button";
-import { Link } from "react-router-dom";
-const Form = ({ onSubmit, inputs, buttonLabel, link, textArea }) => {
+import styles from "./Form.module.scss";
+import classNames from "classnames";
+const Form = ({
+  onSubmit,
+  inputs,
+  inputStyle,
+  buttonLabel,
+  link,
+  formStyle,
+}) => {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
@@ -18,10 +26,14 @@ const Form = ({ onSubmit, inputs, buttonLabel, link, textArea }) => {
     onSubmit(formData);
   };
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form
+      onSubmit={handleSubmit}
+      className={classNames(styles.form, formStyle)}
+    >
       {inputs.map((input) => (
         <Input
           key={input.name}
+          input={inputStyle}
           onChange={handleChange}
           value={formData[input.name] || ""}
           {...input}

@@ -55,6 +55,8 @@ const ContactForm = () => {
           <h3 className={styles.contactText}>Form submitted successfully!</h3>
         ) : (
           <Form
+            inputStyle={styles.inputStyle}
+            formStyle={styles.form}
             onSubmit={handleSubmit}
             inputs={contactFormData}
             buttonLabel="Submit"
